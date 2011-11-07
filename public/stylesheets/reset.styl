@@ -1,39 +1,47 @@
-/**
- * Generic styles
- */
-html
-  overflow-y scroll
-  -webkit-text-size-adjust 100%
-  -ms-text-size-adjust 100%
+/* http//meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  font inherit
+  vertical-align baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+  display block
 
 body
-  font 0.8em/1.5 fonts
-  width 100%
-  height 100%
-  color #404040
-  -webkit-font-smoothing antialiased
-  font-smoothing antialiased
-  text-rendering optimizeLegibility
+  line-height 1
 
-img, object
-  max-width 100%
+ol, ul
+  list-style none
 
-img
-  vendor('box-shadow', 0 0 6px #111)
+blockquote, q
+  quotes none
 
-label
-  display block
-  float none
-  width auto
-  font-weight bold
-  text-align left
-  line-height 20px
-  cursor pointer
+blockquotebefore, blockquoteafter,
+qbefore, qafter
+  content ''
+  content none
 
-strong
-  font-weight bold
-
-::-moz-selection, ::selection
-  background #fee9cc
-  color #222
-  text-shadow none
+table
+  border-collapse collapse
+  border-spacing 0
