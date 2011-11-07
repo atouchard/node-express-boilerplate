@@ -1,0 +1,35 @@
+
+include ../includes/head
+  include ../includes/css_base
+  include ../includes/js_base
+  script(src='/socket.io/socket.io.js')
+  script(src='/javascripts/socket-io.js')
+  script(src='/javascripts/script.js')
+  - if (typeof head_title !== 'undefined')
+    title
+      #{head_title}
+  - else
+    title
+      #{settings.siteName}
+body
+  .topbar(role="banner")
+    .fill
+      .container
+        p.title
+          a(class="brand", href="/")
+            #{settings.siteName}
+          span#slogan(role='slogan') Playground with new cool web stuffs ...
+        p.login
+          - if (typeof session !== 'undefined')
+            | Hi !{session.username} | 
+            a#logout(href='/logout') Log Out
+          - else
+            a#login(href='/login') Login
+            //
+              | &nbsp;or
+              a(href='/login/create') create
+  #wrapper
+    nav#main-menu(role="navigation")
+      include ../includes/main-nav
+    #main(role="main")!= body
+    footer 2011 - openbox.no.de
