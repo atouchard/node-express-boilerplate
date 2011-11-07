@@ -1,0 +1,181 @@
+
+@import 'mixins'
+@import 'generic'
+
+/*
+html
+  background url(../images/18.png) no-repeat
+
+body
+  background none
+*/
+body, html
+  background-color #eee
+
+h1
+  margin-bottom 0
+
+.topbar .brand
+  font-weight bold
+
+  &:hover
+    text-decoration none
+    color #faffbd
+
+.container
+  width 77%
+
+#wrapper
+  position relative
+  margin 40px
+  padding 50px
+  overflow hidden
+  background-color #fff
+  vendor('border-radius', 0 0 6px 6px)
+  vendor('box-shadow', 0 1px 2px rgba(0,0,0,.15))
+
+header
+  padding 20px
+
+footer
+  clear both
+
+.title
+  float left
+
+.login
+  float right
+  color #fff
+
+#slogan
+  font-size 0.85em
+  font-style italic
+  color #fff
+
+#content
+  position relative
+
+#main
+  border-right 1px solid #eee
+  overflow hidden
+  width 72%
+  min-height 400px
+  padding-right 3%
+
+  img    
+    float left
+    margin 0 30px 30px 0
+
+nav
+  float right
+  width 25%
+
+  ul
+    margin-left 10%
+
+  li
+    list-style-type none
+
+    a
+      display block
+      line-height 3em
+      color #666
+      padding 0 10px 0 40px
+      border-bottom 1px solid #fff
+      -webkit-transition-duration .55s
+
+      &:hover
+        color #333
+        text-decoration none
+        border-bottom-color #e2e2e2
+        font-weight bold
+      
+      &.home
+        background url(/images/home.png) 0 5px no-repeat
+
+.profile
+  margin 0 0 18px 10%
+
+.alert-message ul
+  margin 0
+
+  li
+    color #fff
+    list-style-type none
+
+article .page-header
+  margin-bottom 10px
+
+.meta
+  font-size: 11px;
+  display: block;
+  text-align: right;
+
+.twitter-share-button
+  float right
+
+.article-content
+  margin 50px 0 0 0
+  clear both
+
+.decorator
+  vendor('box-shadow', none)  
+
+@media only screen and (min-height: 650px)
+
+  nav
+    position fixed
+    width 20%
+    right 7.3%
+
+@media screen and (max-width: 700px)
+
+  nav
+    position relative
+    float none
+    width 100%
+    
+    ul
+      margin 0
+
+  nav li
+    float left
+    margin 0 0 20px 0
+
+    a
+      text-align center
+      font-size 1.3em
+      padding 0 0 0 40px
+
+  .profile, #slogan
+    display none
+
+  #main
+    width 100%
+    border-right none
+
+#article-form textarea
+  width 100%
+
+@media screen and (max-width: 480px)
+
+  #wrapper
+    margin 0
+
+  nav
+    position relative
+    float none
+    margin-bottom 5px
+    
+    ul
+      padding 5px 7px
+    
+    li a
+      font-size 1.1em
+      padding 0 0 0 40px
+
+  .profile, #slogan
+    display none
+
+  #main
+    border-right none
