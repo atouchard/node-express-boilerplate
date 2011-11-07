@@ -1,0 +1,23 @@
+{
+  "name": "openbox.no.de",
+  "description": "an express boilerplate site",
+  "version": "0.0.1",
+  "author": "Alex Touchard (http://openbox.no.de)",
+  "main": "server.js",
+  "directories": {
+    "public": "./public"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "dependencies": {
+    "express": "2.4.x",
+    "mongoose": "2.0.3",
+    "stylus": "0.15.1",
+    "jade": "0.15.2",
+    "connect": "1.7.1",
+    "socket.io": "0.8.0",
+    "connect-redis": "0.0.8",
+    "colors": "0.3"
+  }
+}
