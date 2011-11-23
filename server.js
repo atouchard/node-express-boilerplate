@@ -24,8 +24,6 @@ require('./boot').boot(app);
 // -- Additional module dependencies
 require('express-namespace');
 
-//routePost.init(app);
-
 // -- Routes
 
 var custom_middleware = [routeUser.checkSession];
