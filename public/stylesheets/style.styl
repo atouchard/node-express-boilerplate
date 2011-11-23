@@ -2,55 +2,42 @@
 @import 'mixins'
 @import 'generic'
 
-/*
-html
-  background url(../images/18.png) no-repeat
-
-body
-  background none
-*/
 body, html
   background-color #eee
+  font-family 'Quattrocento Sans', sans-serif
 
-h1
-  margin-bottom 0
-
-.topbar .brand
-  font-weight bold
-
-  &:hover
-    text-decoration none
-    color #faffbd
+header
+  overflow hidden
 
 .container
   width 77%
 
 #wrapper
   position relative
-  margin 40px
-  padding 50px
+  margin 0 40px 40px
+  padding 50px 50px 20px 50px
   overflow hidden
   background-color #fff
-  vendor('border-radius', 0 0 6px 6px)
   vendor('box-shadow', 0 1px 2px rgba(0,0,0,.15))
-
-header
-  padding 20px
 
 footer
   clear both
 
-.title
+h1
   float left
 
+h1, h2, h3, h4, h5, h6
+  font-family 'Salsa', cursive
+
 .login
-  float right
-  color #fff
+  text-align right
+  margin 5px 50px
+  font-size 0.85em
 
 #slogan
-  font-size 0.85em
+  font-size 0.35em
   font-style italic
-  color #fff
+  font-weight normal
 
 #content
   position relative
@@ -66,9 +53,12 @@ footer
     float left
     margin 0 30px 30px 0
 
-nav
+#main-menu
   float right
   width 25%
+
+nav
+  font-family 'Salsa', cursive
 
   ul
     margin-left 10%
@@ -93,9 +83,6 @@ nav
       &.home
         background url(/images/home.png) 0 5px no-repeat
 
-.profile
-  margin 0 0 18px 10%
-
 .alert-message ul
   margin 0
 
@@ -103,34 +90,27 @@ nav
     color #fff
     list-style-type none
 
-article .page-header
-  margin-bottom 10px
+#articles li
+  list-style-type none
 
 .meta
-  font-size: 11px;
-  display: block;
-  text-align: right;
+  font-size 0.6em
+  display block
+  text-align right
+  margin-bottom 5px
 
 .twitter-share-button
   float right
 
 .article-content
   margin 50px 0 0 0
-  clear both
 
 .decorator
-  vendor('box-shadow', none)  
-
-@media only screen and (min-height: 650px)
-
-  nav
-    position fixed
-    width 20%
-    right 7.3%
+  vendor('box-shadow', none)
 
 @media screen and (max-width: 700px)
 
-  nav
+  #main-menu
     position relative
     float none
     width 100%
@@ -157,12 +137,21 @@ article .page-header
 #article-form textarea
   width 100%
 
+#articles li
+  clear both
+
+  .connected
+    margin 40px 0 0 0
+
+.button-group
+  display block
+
 @media screen and (max-width: 480px)
 
   #wrapper
     margin 0
 
-  nav
+  #main-menu
     position relative
     float none
     margin-bottom 5px
