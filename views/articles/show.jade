@@ -1,0 +1,11 @@
+article
+  .page-header
+    h2= article.title
+      small.meta #{date}
+  - if (typeof session !== 'undefined')
+    .button-group 
+      a(href='/articles/' + article.path + '/edit', class="button icon edit")  Edit
+      a(href='/articles/' + article.path + '/delete', class="button icon remove danger") Delete
+  .article-content!= article.body
+  p
+    a(href='/articles') Retour aux articles

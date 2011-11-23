@@ -1,0 +1,6 @@
+li
+  a(href='/articles/' + article.path) #{article.title}
+  - if (typeof session !== 'undefined')
+    .button-group
+      a(href='/articles/' + article.path + '/edit', class="button icon edit")  Edit
+      a(href='/articles/' + article.path + '/delete', class="button icon remove danger") Delete

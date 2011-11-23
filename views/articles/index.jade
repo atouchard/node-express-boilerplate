@@ -1,0 +1,4 @@
+- if (typeof session !== 'undefined')
+  p
+    a(href='/articles/new', class='button icon add') New article
+ul#articles!= partial('article', {collection: articles})

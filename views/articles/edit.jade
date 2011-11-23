@@ -1,0 +1,4 @@
+h2 Edit #{article.title}
+form(action='/articles/' + article._id, method='POST', id='article-form')
+  input(type='hidden', name='_method', value='PUT')
+  div!= partial('article_form', {locals: {article: article, session: session}})

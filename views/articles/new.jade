@@ -1,0 +1,4 @@
+h2 New Article
+!{flashMessages}
+form(action='/articles', method='POST', id='article-form')
+  div!= partial('article_form', {locals: {article: article, token: token}})

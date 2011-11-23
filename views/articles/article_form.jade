@@ -1,0 +1,19 @@
+- var author = (typeof session.username == 'undefined' ? article.author : session.username)
+div
+  label(for='article-title') Title :
+  input(type='text', id='article-title', name='article[title]', value=article.title)
+div
+  label(for='article-author') Author :
+  input(type='text', id='article-author', name='article[author]', value=author)
+div
+  label(for='article-date') Date :
+  input(type='text', id='article-date', name='article[date]', value=article.date_created)
+div
+  label(for='article-body') Content :
+  textarea(id='article-body', name='article[body]', rows='15')= article.body
+div
+  label(for='article-path') Path :
+  input(type='text', id='article-path', name='article[path]', value=article.path)
+.actions
+  input(type='hidden', name='_csrf', value=token)
+  button(type='submit', class='btn primary') Valider
