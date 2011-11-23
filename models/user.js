@@ -23,7 +23,6 @@ User.path('password').validate(function(password) {
 
 User.virtual('user.password')
   .set(function(pass) {
-    console.log('VIRTUAL : ' + pass);
     this._password = pass;
     this.salt = this.makeSalt();
     this.password = this.encryptPassword(pass);
