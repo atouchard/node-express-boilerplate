@@ -1,6 +1,5 @@
 
-// -- Module dependencies.
-var User = require('./models/user');
+// -- Helper.js from nodepad https://github.com/alexyoung/nodepad/
 
 exports.dynamicHelpers = {
   flashMessages: function(req, res) {
@@ -24,6 +23,7 @@ function FlashMessage(type, messages) {
 }
 
 FlashMessage.prototype = {
+
   icon : function() {
     switch (this.type) {
       case 'info':
