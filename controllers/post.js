@@ -1,7 +1,8 @@
 
 // -- Module dependencies.
 var Post = require('../models/post'),
-    settings = require('../conf/configuration').settings;
+    settings = require('../conf/configuration').settings,
+    moment = require('moment');
 
 /**
  * Init routing
@@ -25,7 +26,7 @@ module.exports.new = function(req, res) {
  */
 module.exports.index = function(req, res) {
   res.render('index', {
-    head_title: settings.siteName + ' | Articles'
+    head_title: settings.siteName
   });
 };
 
@@ -50,7 +51,7 @@ module.exports.all = function(req, res) {
 module.exports.find = function(req, res) {
   Post.findOne({ 'path' : req.params.id }, function (err, post) {
     if (err) { throw err; }
-    var date = formatDate(post.date_created);
+    var date = moment(post.date_created).format("dddd, MMMM Do YYYY");
     res.render('articles/show', {
       locals: {
         article: post,
@@ -120,12 +121,4 @@ function flashMongoose(req, res, err) {
   for (var u in t) { 
     req.flash('error', t[u].type);
   }
-}
-
-function formatDate(date) {
-  var d = new Date(date);
-  var day = d.getDate();
-  var month = d.getMonth() + 1;
-  var year = d.getFullYear();
-  return day + '/' + month + '/' + year;
 }
