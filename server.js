@@ -67,6 +67,15 @@ app.get('/404', function(req, res, next) {
   next();
 });
 
+function checkAuthentication(req, res, next) {
+  if (req.session.user_id) {
+    next()
+  }
+  else {
+    res.redirect('/');
+  }
+}
+
 // Only listen on $ node app.js
 if (!module.parent) {
   logo.print();
