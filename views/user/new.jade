@@ -1,0 +1,15 @@
+
+!{flashMessages}
+form(action='/login/create', method='POST')
+  div
+    label(for='username') Name or email :
+    input(type='text', name='user[username]', id='username', value=user.username)
+  div
+    label(for='password') Password :
+    input(type='password', name='user[password]', id='password')
+  div
+    label(for='password-confirm') Password confirm :
+    input(type='password', name='password_confirm', id='password-confirm')
+  .actions
+    input(type='hidden', name='_csrf', value=token)
+    button(type='submit', class='btn primary') Valider

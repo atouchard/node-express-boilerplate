@@ -1,0 +1,12 @@
+
+!{flashMessages}
+form(action='/login', method='POST')
+  div
+    label(for='username') Login :
+    input(type='text', name='user[username]', id='username')
+  div
+    label(for='password') Password :
+    input(type='password', name='user[password]', id='password')
+  .actions
+    input(type='hidden', name='_csrf', value=token)
+    button(type='submit', class='btn primary') Valider
