@@ -71,7 +71,6 @@ app.get('/404', function(req, res, next) {
 
 // Only listen on $ node app.js
 if (!module.parent) {
-
   logo.print();
   app.listen(settings.port);
   console.log('Express server listening on port %d, environment: %s', app.address().port, app.settings.env);

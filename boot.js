@@ -82,4 +82,4 @@ module.exports.boot = function(app) {
 
   // -- Connect to appropriate MongoDB database
   mongoose.connect(app.set('db-uri'));
-}
+};
