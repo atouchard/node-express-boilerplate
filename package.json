@@ -16,6 +16,7 @@
     "socket.io": "0.8.0",
     "connect-redis": "0.0.8",
     "colors": "0.3",
-    "moment": "1.1.0"
+    "moment": "1.1.0",
+    "express-nemaspace": "0.0.4"
   }
 }
