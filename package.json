@@ -11,7 +11,7 @@
     "express": "2.4.x",
     "mongoose": "2.0.3",
     "stylus": "0.15.1",
-    "jade": "0.15.2",
+    "jade": "0.16.0",
     "connect": "1.7.1",
     "socket.io": "0.8.0",
     "connect-redis": "0.0.8",
