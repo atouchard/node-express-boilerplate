@@ -76,7 +76,7 @@ module.exports.boot = function(app) {
     });
 
     // -- Dynamic view helpers
-    app.dynamicHelpers(require('./helpers').dynamicHelpers);
+    app.dynamicHelpers(helpers.dynamicHelpers);
 
   });
 
