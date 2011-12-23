@@ -6,9 +6,9 @@ A simple boilerplate for Express.js
 
 Node express boilerplate is another boilerplate for Express.js using redis, mongoose, jade, stylus, ...
 
-Supposed you have redis & mongodb installed
-
 ## Setup
+
+  - Supposed you have redis & mongodb installed
 
       // Install package
       git git@github.com:atouchard/node-express-boilerplate.git
