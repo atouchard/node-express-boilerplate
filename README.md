@@ -12,7 +12,7 @@ Node express boilerplate is another boilerplate for Express.js using redis, mong
       cd node-express-boilerplate
       npm install -g
 
-       // running redis
+      // running redis
       /usr/local/bin/redis-server
 
       // running mongodb

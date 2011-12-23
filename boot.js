@@ -4,6 +4,7 @@ var express = require('express'),
     RedisStore = require('connect-redis')(express),
     mongoose = require('mongoose'),
     helpers = require('./helpers'),
+    gzippo = require('gzippo'),
     settings = require('./conf/configuration').settings;
 
 // -- Global paths
@@ -56,7 +57,7 @@ module.exports.boot = function(app) {
     // -- Static ressources
     app.use(express.staticCache());
     var duration = 2592000000; // One month
-    app.use(express.static(static_root, { maxAge: duration }));
+    app.use(gzippo.staticGzip(static_root, { maxAge: duration }));
     app.use(express.favicon(static_root + '/favicon.ico'));
 
     // -- 500 status
