@@ -24,4 +24,4 @@ Supposed you have redis & mongodb installed
       // running app
       node server.js
 
-  - Browse to http://localhost:8001
+Browse to http://localhost:8001
