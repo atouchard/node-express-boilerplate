@@ -8,7 +8,7 @@ Node express boilerplate is another boilerplate for Express.js using redis, mong
 
 ## Setup
 
-  - Supposed you have redis & mongodb installed
+Supposed you have redis & mongodb installed
 
       // Install package
       git git@github.com:atouchard/node-express-boilerplate.git
